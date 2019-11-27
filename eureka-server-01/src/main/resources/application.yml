@@ -1,0 +1,13 @@
+server:
+  port: 9527
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      default-zone: http://localhost:9527/eureka/
+spring:
+  application:
+    name: eureka-server-01
