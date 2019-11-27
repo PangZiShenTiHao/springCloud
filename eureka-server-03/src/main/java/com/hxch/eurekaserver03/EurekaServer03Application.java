@@ -1,4 +1,4 @@
-package com.hxch.eurekaserver01;
+package com.hxch.eurekaserver03;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,11 +6,11 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @EnableEurekaServer
 @SpringBootApplication
-public class EurekaServer01Application {
+public class EurekaServer03Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaServer01Application.class, args);
-        System.out.println("eureka-server-01 ... eureka服务端1启动成功 ... ");
+        SpringApplication.run(EurekaServer03Application.class, args);
+        System.out.println("eureka-server-03 ... eureka服务端3启动成功 ... ");
     }
 
 }

@@ -1,0 +1,15 @@
+server:
+  port: 9528
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:9529/eureka/
+
+spring:
+  application:
+    name: eureka-server-02
