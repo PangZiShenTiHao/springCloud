@@ -15,6 +15,10 @@ spring:
     name: configServer
   cloud:
     config:
+      discovery:
+        enabled: true  #开启通过服务访问configServer的功能
+        service-id: configServer  # 配置中心的application.name
+
       label: master
       uri: http://localhost:9538
       profile: dev
