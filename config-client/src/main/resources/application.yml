@@ -1,0 +1,20 @@
+server:
+  port: 9539
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:9527/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+
+spring:
+  application:
+    name: configServer
+  cloud:
+    config:
+      label: master
+      uri: http://localhost:9538
+      profile: dev

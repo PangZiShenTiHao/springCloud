@@ -1,15 +1,13 @@
-package com.hxch.eurekaserver01;
+package com.hxch.configserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EurekaServer01ApplicationTests {
+class ConfigServerApplicationTests {
 
     @Test
     void contextLoads() {
-
-        //获取
     }
 
 }
