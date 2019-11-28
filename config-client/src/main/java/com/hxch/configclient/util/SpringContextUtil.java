@@ -1,7 +1,6 @@
-package com.hxch.configclient.utils;
+package com.hxch.configclient.util;
 
 import org.springframework.beans.BeansException;
-import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
@@ -26,7 +25,7 @@ public class SpringContextUtil implements ApplicationContextAware {
 
     //获取 Application
     public static ApplicationContext getApplicationContext(){
-        return applicationContext;
+        return SpringContextUtil.applicationContext;
     }
 
     // 通过名字获取 bean

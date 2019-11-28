@@ -1,7 +1,7 @@
 package com.hxch.configclient;
 
 import com.hxch.configclient.dto.JdbcConfigBean;
-import com.hxch.configclient.utils.SpringContextUtil;
+import com.hxch.configclient.util.SpringContextUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
