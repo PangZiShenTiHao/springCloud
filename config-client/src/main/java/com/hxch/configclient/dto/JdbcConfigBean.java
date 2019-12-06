@@ -1,6 +1,7 @@
 package com.hxch.configclient.dto;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
@@ -11,6 +12,7 @@ import java.io.Serializable;
  * @Author:huangxc
  * @Date: 2019/11/28 0028 15:35
  **/
+@RefreshScope
 @Component
 public class JdbcConfigBean implements Serializable {
     @Value("${jdbc.url}")
@@ -60,7 +62,7 @@ public class JdbcConfigBean implements Serializable {
 
     @Override
     public String toString() {
-        return "JdbcConfigBean{" +
+        return "{" +
                 "url='" + url + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +

@@ -1,6 +1,19 @@
 server:
   port: 9539
 
+spring:
+  application:
+    name: configClient
+  cloud:
+    config:
+      discovery:
+        enabled: true  #开启通过服务访问configServer的功能
+        service-id: configServer  # 配置中心的application.name
+      label: master
+      uri: http://localhost:9538
+      profile: dev
+
+
 eureka:
   instance:
     hostname: localhost
@@ -10,15 +23,9 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
 
-spring:
-  application:
-    name: configServer
-  cloud:
-    config:
-      discovery:
-        enabled: true  #开启通过服务访问configServer的功能
-        service-id: configServer  # 配置中心的application.name
-
-      label: master
-      uri: http://localhost:9538
-      profile: dev
+#配置手动实时刷新
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

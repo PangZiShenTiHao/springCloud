@@ -34,6 +34,12 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <!-- 如果git 上配置文件信息修改了，本地缓存的配置文件信息是不会立即刷新的  需要客户端需要加上actuator 监控中心 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>

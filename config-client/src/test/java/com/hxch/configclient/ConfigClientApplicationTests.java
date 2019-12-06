@@ -14,4 +14,5 @@ class ConfigClientApplicationTests {
         System.out.println(jdbcConfigBean.toString());
     }
 
+
 }
