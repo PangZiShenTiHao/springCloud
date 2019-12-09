@@ -1,0 +1,6 @@
+spring cloud config  手动刷新步骤
+1.先调用配置中心客户端刷新地址 post
+http://localhost:9539/actuator/refresh
+http://localhost:9539/actuator/bus-refresh //使用消息总线手动刷新配置
+2.才能拿到最新的数据
+http://localhost:9539/getJdbcConfigBean

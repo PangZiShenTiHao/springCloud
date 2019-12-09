@@ -22,3 +22,20 @@ spring:
           username: PangZiShenTiHao
           password: Pang1023
       label: master
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+#security:                       #是否开启基本的鉴权，默认为true
+  #basic:
+    #enabled: false
+

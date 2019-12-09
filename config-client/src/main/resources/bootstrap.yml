@@ -12,6 +12,11 @@ spring:
       label: master
       uri: http://localhost:9538
       profile: dev
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 
 eureka:
@@ -29,3 +34,7 @@ management:
     web:
       exposure:
         include: "*"
+
+#security:                                #
+  #basic:
+    #enabled: false
