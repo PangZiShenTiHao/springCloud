@@ -24,8 +24,6 @@
       <module name="eureka-server-01" options="-parameters" />
       <module name="eureka-server-02" options="-parameters" />
       <module name="eureka-server-03" options="-parameters" />
-      <module name="parent" options="-parameters" />
-      <module name="spring-util" options="" />
     </option>
   </component>
 </project>
