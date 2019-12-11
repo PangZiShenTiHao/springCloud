@@ -4,3 +4,5 @@ http://localhost:9539/actuator/refresh
 http://localhost:9539/actuator/bus-refresh //使用消息总线手动刷新配置
 2.才能拿到最新的数据
 http://localhost:9539/getJdbcConfigBean
+3.整合mybatis 
+dao层 要用 @Mapper注解  用其他注解貌似不管用
