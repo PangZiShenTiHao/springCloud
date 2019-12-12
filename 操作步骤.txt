@@ -6,3 +6,5 @@ http://localhost:9539/actuator/bus-refresh //使用消息总线手动刷新配置
 http://localhost:9539/getJdbcConfigBean
 3.整合mybatis 
 dao层 要用 @Mapper注解  用其他注解貌似不管用
+4.zuul 网关访问user微服务 第一个user是注册中心上的 微服务名称  第二个user 路劲的一部分
+http://localhost:9629/user/user/queryUser?username=xjt

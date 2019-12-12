@@ -1,0 +1,26 @@
+server:
+  port: 9629
+
+spring:
+  application:
+    name: zuul-gateway
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:9527/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: localhost
+    prefer-ip-address: true #\u8BBF\u95EE\u8DEF\u52B2\u53EF\u73B0\u5B9Eip\u5730\u5740
+    lease-expiration-duration-in-seconds: 5
+    lease-renewal-interval-in-seconds: 2
+
+info:
+  author.name: huangxc
+  app.name: ${spring.application.name}
+  server.port: ${server.port}
+  application.name: ${spring.application.name}
