@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/movie/pom.xml" />
         <option value="$PROJECT_DIR$/parent/pom.xml" />
         <option value="$PROJECT_DIR$/springutil/pom.xml" />
+        <option value="$PROJECT_DIR$/zuul-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/config-client/pom.xml" />
         <option value="$PROJECT_DIR$/config-server/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-client-01/pom.xml" />
