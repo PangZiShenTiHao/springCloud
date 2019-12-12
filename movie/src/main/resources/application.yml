@@ -9,7 +9,7 @@ mybatis:
 
 spring:
   application:
-    name: user
+    name: movie
   datasource:
     username: root
     password: root
