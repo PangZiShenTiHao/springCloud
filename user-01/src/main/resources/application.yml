@@ -1,0 +1,31 @@
+server:
+  port: 9630
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  #config-location: classpath:mybatis/mybatis-config.xml
+
+
+spring:
+  application:
+    name: user
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/list?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:9527/eureka/
+  instance:
+    hostname: localhost
+    prefer-ip-address: true #\u8BBF\u95EE\u8DEF\u52B2\u53EF\u73B0\u5B9Eip\u5730\u5740
+    lease-expiration-duration-in-seconds: 5
+    lease-renewal-interval-in-seconds: 2
+

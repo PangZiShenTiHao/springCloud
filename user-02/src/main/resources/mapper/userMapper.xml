@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace用于绑定Dao接口 -->
+<mapper namespace="com.hxch.user02.dao.UserDao">
+    <!-- 用用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.hxch.user02.dto.User" >
+        <!-- column代表数据库列名，property代表实体类属性名 -->
+        <result column="email" property="email" jdbcType="VARCHAR"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="role" property="role" jdbcType="VARCHAR"/>
+        <result column="mobile" property="mobile" jdbcType="VARCHAR"/>
+    </resultMap>
+    <!-- 查询名字记录sql -->
+    <select id="selectUserByUserName" parameterType="String" resultMap="BaseResultMap">
+        SELECT t.email, t.username, t.role, t.mobile FROM user t WHERE t.username = #{username}
+    </select>
+</mapper>

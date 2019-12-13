@@ -1,7 +1,7 @@
-package com.hxch.user.controller;
+package com.hxch.user01.controller;
 
-import com.hxch.user.dto.User;
-import com.hxch.user.service.UserService;
+import com.hxch.user01.dto.User;
+import com.hxch.user01.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
@@ -32,7 +32,7 @@ public class UserController {
     public List<User> queryUserList(String username){
 
         List<User> userList = userService.selectUserByUserName(username);
-        log.info("user = "+userList.toString());
+        log.info("user-01 = "+userList.toString());
         return userList;
 
     }

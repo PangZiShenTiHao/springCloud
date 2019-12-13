@@ -36,3 +36,4 @@ zuul:
     movie:
       serviceId: movie
       path: /movie/**
+
