@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>查询</title>
+</head>
+<body>
+<div align="center">
+    <table style="border: 1px solid;">
+        <tr>
+        <th>share_day</th>
+        <th>share_money</th>
+        <th>share_quzubi</th>
+        <th>add_time</th>
+        <th>share_time</th>
+        <th>is_share</th>
+        <th>change_quzubi</th>
+        <th>change_ratio</th>
+        </tr>
+
+        <tr th:each="dto:${list}">
+            <td th:text="${dto.shareDay}"></td>
+            <td th:text="${dto.shareMoney}"></td>
+            <td th:text="${dto.shareQuzubi}"></td>
+            <td th:text="${dto.addTime}"></td>
+            <td th:text="${dto.shareTime}"></td>
+            <td th:text="${dto.isShare}"></td>
+            <td th:text="${dto.changeQuzubi}"></td>
+            <td th:text="${dto.changeRatio}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

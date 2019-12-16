@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>新增</title>
+</head>
+<body>
+<form action="saveOne" method="post">
+    share_day：<input type="text" th:value="${shareDay}" name="shareDay"><br/>
+    share_money：<input type="text" th:value="${shareMoney}" name="shareMoney"><br/>
+    share_quzubi：<input type="text" th:value="${shareQuzubi}" name="shareQuzubi"><br/>
+    add_time：<input type="text" th:value="${addTime}" name="addTime"><br/>
+    share_time：<input type="text" th:value="${shareTime}" name="shareTime"><br/>
+    is_share：<input type="text" th:value="${isShare}" name="isShare"><br/>
+    change_quzubi：<input type="text" th:value="${changeQuzubi}" name="changeQuzubi"><br/>
+    change_ratio：<input type="text" th:value="${changeRatio}" name="changeRatio"><br/>
+    <button>保存</button>
+</form>
+
+</body>
+</html>

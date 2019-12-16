@@ -2,7 +2,6 @@ package com.hxch.movie.service;
 
 import com.hxch.movie.dao.QzShareBonusRepository;
 import com.hxch.movie.dto.QzShareBonusDto;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -37,5 +36,9 @@ public class QzShareBonusService {
         return qzShareBonusRepository.findByShareDayLike(shareDay);
     }
 
+    @Transactional
+    public void saveOne(QzShareBonusDto dto){
+        qzShareBonusRepository.save(dto);
+    }
 
 }

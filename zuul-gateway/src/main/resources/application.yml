@@ -37,3 +37,11 @@ zuul:
       serviceId: movie
       path: /movie/**
 
+  host:
+    connect-timeout-millis: 15000  #HTTP连接超时大于Hystrix的超时时间
+    socket-timeout-millis: 60000  #socket超时时间
+  ribbon-isolation-strategy: semaphore
+  semaphore:
+    max-semaphores: 20
+
+

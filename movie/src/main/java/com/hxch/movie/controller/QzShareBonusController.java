@@ -2,10 +2,10 @@ package com.hxch.movie.controller;
 
 import com.hxch.movie.dto.QzShareBonusDto;
 import com.hxch.movie.service.QzShareBonusService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ import java.util.List;
  * @Author:huangxc
  * @Date: 2019/12/13 0013 17:28
  **/
-@RestController
+@Controller
 @RequestMapping("/qz")
 public class QzShareBonusController {
 
@@ -48,5 +48,24 @@ public class QzShareBonusController {
     @RequestMapping("/findByShareDayLike")
     public List<QzShareBonusDto> findByShareDayLike(String shareDay){
         return service.findByShareDayLike(shareDay);
+    }
+
+    @RequestMapping("/queryListByShareDay")
+    public String queryListByShareDay(String shareDay, Model model){
+        List<QzShareBonusDto> list = service.findByShareDay(shareDay);
+        model.addAttribute("list", list);
+        return "queryQzShareBonus";
+    }
+
+    @RequestMapping("/addOne")
+    public String addOne() throws Exception{
+        return "addQzShareBonus";
+    }
+
+    @RequestMapping("/saveOne")
+    @ResponseBody
+    public String saveOne(QzShareBonusDto dto) throws Exception{
+        service.saveOne(dto);
+        return "新增成功";
     }
 }
