@@ -31,6 +31,7 @@ public class RabbitMQReceiveMessage {
         Channel channel = connection.createChannel();
         //声明交换机
         channel.exchangeDeclare("hxch", "direct", true);
+
         //定义队列的消费者
         DefaultConsumer defaultConsumer = new DefaultConsumer(channel) {
             //获取到达的消息
